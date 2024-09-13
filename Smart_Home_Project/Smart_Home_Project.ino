@@ -39,6 +39,9 @@ float tempThreshold = 25.0f;
 float humThreshold = 60.0f;
 
 void setup() {
+  // Initialize I2C and set SDA and SCL pins 
+  Wire.begin(21, 22);
+  
   // Starts the serial communication between the device and the computer
   // 115200 bits per second
   Serial.begin(115200);
